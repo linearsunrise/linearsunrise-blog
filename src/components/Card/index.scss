@@ -1,0 +1,67 @@
+.card {
+  flex: 0 0 auto;
+  color: var(--color-dark);
+  display: inline-block;
+  min-width: 60px;
+  max-width: 256px;
+  margin: 20px 30px;
+  background-color: var(--color-light);
+  border: 1px var(--color-dimmer-light) solid;
+
+  &:hover {
+    box-shadow: var(--color-dark) -10px 10px;
+
+    .card__image {
+      filter: saturate(1);
+    }
+  }
+
+  &__image {
+    height: 256px;
+    width: 256px;
+    min-height: 60px;
+    min-width: 60px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0) blur(1px);
+
+    &--points {
+      background-image: url('../../img/cards/points.png');
+    }
+    &--lines {
+      background-image: url('../../img/cards/lines.png');
+    }
+    &--circles {
+      background-image: url('../../img/cards/circles.png');
+    }
+    &--grid {
+      background-image: url('../../img/cards/grid.png');
+    }
+    &--colorful_circle {
+      background-image: url('../../img/cards/colorful_circle.png');
+    }
+    &--star {
+      background-image: url('../../img/cards/star.png');
+    }
+    &--attractor {
+      background-image: url('../../img/cards/attractor.png');
+    }
+    &--alternate_sourceep {
+      background-image: url('../../img/cards/alternate_sourceep.png');
+    }
+    &--midnight_wandering {
+      background-image: url('../../img/cards/midnight_wandering.png');
+    }
+  }
+
+  &__text {
+    margin: 8% 2% 10% 10%;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+}

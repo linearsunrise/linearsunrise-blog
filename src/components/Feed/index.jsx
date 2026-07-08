@@ -1,15 +1,16 @@
 import React, { PureComponent } from 'react'
-import Card from './Card'
+import Card from '../Card'
+import './index.scss'
 
 class Feed extends PureComponent {
   render() {
     const { article } = this.props
     return (
       <div className="feed">
-        <h1>{article.subject}</h1>
-        <div class="flexbox-container">
+        <h1 className="feed__title">{article.subject}</h1>
+        <div className="feed__list">
           {article.article.map((e) => (
-            <Card card={e} />
+            <Card card={e} key={e.head} />
           ))}
         </div>
       </div>

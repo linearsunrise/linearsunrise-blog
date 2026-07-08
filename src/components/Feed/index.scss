@@ -1,0 +1,17 @@
+.feed {
+  background-color: #f0f0f0;
+
+  &__title {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
+    color: var(--color-dark);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0;
+  }
+}

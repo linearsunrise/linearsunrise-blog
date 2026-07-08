@@ -113,7 +113,7 @@ function App() {
       {articles.feed.map((e) => (
         <Feed article={e} key={e.subject} />
       ))}
-      <Footer />
+      <Footer props={articles.header} />
     </div>
   )
 }

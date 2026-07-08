@@ -1,34 +1,50 @@
 .footer {
   display: flex;
-  height: 70px;
+  height: 48rem;
   background-color: var(--color-dark);
+  padding: 8rem 12rem 0;
+  gap: 6rem;
+
+  &__text {
+    font-size: 4rem;
+    line-height: 6rem;
+
+    &--bold {
+      font-weight: bold;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    // gap: 2rem;
+  }
 
   &__info {
     display: flex;
-    margin: auto;
+    flex-direction: column;
+    gap: 4rem;
   }
 
   &__container {
     display: flex;
+    align-items: center;
+    gap: 4rem;
   }
 
   &__logo {
-    height: 24px;
-    width: 24px;
+    height: 24rem;
+    width: 24rem;
+    
+    color: var(--color-dimmer-light);
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
   }
 
-  &__logo-path {
-    stroke: var(--color-dimmer-light);
-    stroke-width: 10px;
-  }
-
   &__text {
     color: var(--color-dimmer-light);
     font-family: var(--font-mono);
-    font-size: 20px;
-    margin: auto 0 auto 10px;
+    font-size: 4rem;
   }
 }

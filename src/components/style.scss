@@ -2,13 +2,13 @@
 $light: #dbdbdb;
 $dimmer-light: darken($light, 20%);
 $dark: #424242;
-$monospace: "IBM Plex Mono";
-$sans: "IBM Plex Sans";
-$serif: "IBM Plex Serif";
-$condensed: "IBM Plex Condensed";
+$monospace: 'IBM Plex Mono';
+$sans: 'IBM Plex Sans';
+$serif: 'IBM Plex Serif';
+$condensed: 'IBM Plex Condensed';
 
 //fontfaces
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 // font-family: 'IBM Plex Mono', monospace;
 // font-family: 'IBM Plex Sans', sans-serif;
 // font-family: 'IBM Plex Sans Condensed', sans-serif;
@@ -16,228 +16,233 @@ $condensed: "IBM Plex Condensed";
 
 // image resources
 .points {
-    background-image: url("../img/cards/points.png");
+  background-image: url('../img/cards/points.png');
 }
 .lines {
-    background-image: url("../img/cards/lines.png");
+  background-image: url('../img/cards/lines.png');
 }
 .circles {
-    background-image: url("../img/cards/circles.png");
+  background-image: url('../img/cards/circles.png');
 }
 .grid {
-    background-image: url("../img/cards/grid.png");
+  background-image: url('../img/cards/grid.png');
 }
 .colorful_circle {
-    background-image: url("../img/cards/colorful_circle.png");
+  background-image: url('../img/cards/colorful_circle.png');
 }
 .star {
-    background-image: url("../img/cards/star.png");
+  background-image: url('../img/cards/star.png');
 }
 .attractor {
-    background-image: url("../img/cards/attractor.png");
+  background-image: url('../img/cards/attractor.png');
 }
 .alternate_sourceep {
-    background-image: url("../img/cards/alternate_sourceep.png");
+  background-image: url('../img/cards/alternate_sourceep.png');
 }
 .midnight_wandering {
-    background-image: url("../img/cards/midnight_wandering.png");
+  background-image: url('../img/cards/midnight_wandering.png');
 }
 
 .application {
-    font-family: "IBM Plex Sans";
-    min-width: 256px;
-    max-width: 900px;
-    margin: 0 auto;
+  font-family: 'IBM Plex Sans';
+  min-width: 256px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 a:link {
-    color: $dark;
-    text-decoration: none;
-    .card_img {
-        filter: saturate(0) blur(1px);
-    }
+  color: $dark;
+  text-decoration: none;
+  .card_img {
+    filter: saturate(0) blur(1px);
+  }
 }
 a:visited {
-    color: $dimmer-light;
-    text-decoration: line-through solid;
-    cursor: pointer;
+  color: $dimmer-light;
+  text-decoration: line-through solid;
+  cursor: pointer;
 }
 a:hover {
-    .card_img {
-        filter: saturate(1);
-    }
-    color: lighten($color: desaturate($color: orange, $amount: 40%), $amount: 10%);
+  .card_img {
+    filter: saturate(1);
+  }
+  color: lighten(
+    $color: desaturate($color: orange, $amount: 40%),
+    $amount: 10%
+  );
 }
 
 .cls-1 {
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .header {
-    margin: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  .container {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-    width: 100%;
-    .container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        .logo {
-            display: block;
-            width: 128px;
-            height: 128px;
-            min-width: 128px;
-            min-height: 128px;
-            max-width: 128px;
-            max-height: 128px;
-            box-sizing: border-box;
-            background-size: cover;
-            background-position: center;
-            // background-image: url("../img/linear_sunrise-logo_logodark.svg");
-            .cls-1 {
-                stroke: $dark;
-                stroke-width: 5px;
-            }
-        }
-        .generalInfo {
-            margin-left: 10px;
-            color: $dark;
-            // display: grid;
-            min-width: 50px;
-            max-width: 400px;
-            h1 {
-                font-weight: bold;
-                font-size: 30px;
-            }
-            p {
-                font-size: 18px;
-            }
-        }
+    align-items: center;
+    justify-content: center;
+    .logo {
+      display: block;
+      width: 128px;
+      height: 128px;
+      min-width: 128px;
+      min-height: 128px;
+      max-width: 128px;
+      max-height: 128px;
+      box-sizing: border-box;
+      background-size: cover;
+      background-position: center;
+      // background-image: url("../img/linear_sunrise-logo_logodark.svg");
+      .cls-1 {
+        stroke: $dark;
+        stroke-width: 5px;
+      }
     }
-    .linkedAccounts {
-        background-color: $dark;
-        width: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        ul {
-            a:link{color: $light}
-            margin-right: 10px;
-            text-align: right;
-        }
+    .generalInfo {
+      margin-left: 10px;
+      color: $dark;
+      // display: grid;
+      min-width: 50px;
+      max-width: 400px;
+      h1 {
+        font-weight: bold;
+        font-size: 30px;
+      }
+      p {
+        font-size: 18px;
+      }
     }
+  }
+  .linkedAccounts {
+    background-color: $dark;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    ul {
+      a:link {
+        color: $light;
+      }
+      margin-right: 10px;
+      text-align: right;
+    }
+  }
 }
 @media screen and (max-device-width: 900px) {
-    .header {
-        .container {
-            margin: 10px;
-        }
-        // display: flex;
-        margin: 0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .linkedAccounts {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            ul {
-                margin: 30px;
-                text-align: center;
-            }
-        }
+  .header {
+    .container {
+      margin: 10px;
     }
+    // display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .linkedAccounts {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      ul {
+        margin: 30px;
+        text-align: center;
+      }
+    }
+  }
 }
 
 .feed {
-    // width: 900px;
-    background-color: #f0f0f0;
-    h1 {
-        text-align: center;
-        font-size: 50px;
-        padding-top: 20px;
-        color: $dark;
-    }
-    .flexbox-container {
-        display: flex;
-        // width: 100%;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        margin: 0;
-        .card {
-            flex: 0 0 auto;
-            color: $dark;
-            display: inline-block;
-            min-width: 60px;
-            max-width: 256px;
-            margin: 20px 30px;
-            background-color: $light;
-            border: 1px $dimmer-light solid;
-            .card_img {
-                height: 256px;
-                width: 256px;
-                min-height: 60px;
-                min-width: 60px;
-                box-sizing: border-box;
-                background-size: cover;
-                background-position: center;
-            }
-            .card_text {
-                margin: 8% 2% 10% 10%;
-                h2 {
-                    font-size: 30px;
-                    font-weight: bold;
-                    margin: 20px 0;
-                }
-            }
+  // width: 900px;
+  background-color: #f0f0f0;
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
+    color: $dark;
+  }
+  .flexbox-container {
+    display: flex;
+    // width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0;
+    .card {
+      flex: 0 0 auto;
+      color: $dark;
+      display: inline-block;
+      min-width: 60px;
+      max-width: 256px;
+      margin: 20px 30px;
+      background-color: $light;
+      border: 1px $dimmer-light solid;
+      .card_img {
+        height: 256px;
+        width: 256px;
+        min-height: 60px;
+        min-width: 60px;
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: center;
+      }
+      .card_text {
+        margin: 8% 2% 10% 10%;
+        h2 {
+          font-size: 30px;
+          font-weight: bold;
+          margin: 20px 0;
         }
-        .card:hover {
-            box-shadow: $dark -10px 10px;
-        }
+      }
     }
-    p {
-        margin: 10% 5% 10% 0;
+    .card:hover {
+      box-shadow: $dark -10px 10px;
     }
+  }
+  p {
+    margin: 10% 5% 10% 0;
+  }
 }
 
 .footer {
+  display: flex;
+  height: 70px;
+  background-color: $dark;
+  .info {
     display: flex;
-    height: 70px;
-    background-color: $dark;
-    .info {
-        display: flex;
-        margin: auto;
-        .container {
-            display: flex;
-            .logo {
-                // background-image: url("../img/linear_sunrise-logo-01.png");
-                height: 24px;
-                width: 24px;
-                box-sizing: border-box;
-                background-size: cover;
-                background-position: center;
-                .cls-1 {
-                    fill: none;
-                    stroke-linecap: round;
-                    stroke-linejoin: round;
-                    // stroke-alignment: outer;
-                    stroke: $dimmer-light;
-                    stroke-width: 10px;
-                }
-            }
-            p {
-                color: $dimmer-light;
-                font-family: $monospace;
-                font-size: 20px;
-                font-style: mono;
-                margin: auto 0 auto 10px;
-            }
+    margin: auto;
+    .container {
+      display: flex;
+      .logo {
+        // background-image: url("../img/linear_sunrise-logo-01.png");
+        height: 24px;
+        width: 24px;
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: center;
+        .cls-1 {
+          fill: none;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          // stroke-alignment: outer;
+          stroke: $dimmer-light;
+          stroke-width: 10px;
         }
+      }
+      p {
+        color: $dimmer-light;
+        font-family: $monospace;
+        font-size: 20px;
+        font-style: mono;
+        margin: auto 0 auto 10px;
+      }
     }
+  }
 }

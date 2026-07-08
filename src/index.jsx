@@ -1,5 +1,5 @@
 import React from 'react'
-import { hydrateRoot } from 'react-dom/client'
+import {render} from 'react-dom'
 import App from './components/App'
 
-hydrateRoot(document.getElementById('root'), <App />)
+render(<App/>, document.getElementById('root'))

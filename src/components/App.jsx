@@ -1,4 +1,7 @@
 import React from 'react'
+import Header from './Header'
+import Footer from './Footer'
+
 // import Navigation from './Navigation'
 import './reset.css'
 import './style.scss'
@@ -22,6 +25,27 @@ let articles = {
             "text": "SOUNDCLOUD"
         }
     ],
+    "header": {
+        "name": "linear sunrise",
+        "info": "I am Ilya Mordvinkin. I make music and code.",
+        "linkedAccounts": [
+            {
+                "link": "https://soundcloud.com/linearsunrise",
+                "text": "soundcloud",
+                "img": ""
+            },
+            {
+                "link": "https://linearsunrise.bandcamp.com/",
+                "text": "bandcamp",
+                "img": ""
+            },
+            {
+                "link": "https://vk.com/linearsunrise",
+                "text": "vk",
+                "img": ""
+            }
+        ]
+    },
     "feed": [
         {
             "subject": "Test article",
@@ -85,13 +109,13 @@ let articles = {
             "subject": "Music",
             "article": [
                 {
-                    "head": "Alternate source EP",
-                    "paragraph": "My first ever EP, that, abstractly, tells a story about power electronics",
+                    "head": "Alternate Source EP",
+                    "paragraph": "My first ever EP about power electronics",
                     "img": "card_img alternate_sourceep",
-                    "link": ""
+                    "link": "https://soundcloud.com/linearsunrise/sets/alternate_sourceep"
                 },
                 {
-                    "head": "midnight wandering",
+                    "head": "Midnight Wandering",
                     "paragraph": "A little journey in the night",
                     "img": "card_img midnight_wandering",
                     "link": "https://soundcloud.com/linearsunrise/sets/midnight-wandering"
@@ -103,9 +127,11 @@ let articles = {
 
 function App() {
     return (
-        <div>
+        <div className="application">
+            <Header props={articles.header} />
             {/* <Navigation tab={articles.navigationBar} /> */}
             {articles.feed.map(e => <Feed article={e} />)}
+            <Footer />
         </div>
     )
 }
